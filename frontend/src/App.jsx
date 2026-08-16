@@ -17,7 +17,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
+      const response = await fetch("https://meeting-to-action-agent.onrender.com/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,6 +47,7 @@ function App() {
       <header style={styles.header}>
         <div>
           <h1 style={styles.title}>Meeting-to-Action Agent</h1>
+
           <p style={styles.subtitle}>
             Turn meeting transcripts into clear, structured action items.
           </p>
@@ -63,6 +64,7 @@ function App() {
           <div style={styles.sectionHeader}>
             <div>
               <h2 style={styles.heading}>Meeting Transcript</h2>
+
               <p style={styles.description}>
                 Paste your meeting conversation below and let the AI extract
                 the important information.
@@ -104,6 +106,7 @@ Rahul: I'll send the API documentation by Thursday.`}
 
             <div style={styles.summaryCard}>
               <h3 style={styles.cardTitle}>Summary</h3>
+
               <p style={styles.summary}>{result.summary}</p>
             </div>
 
